@@ -27,7 +27,7 @@ export const down = async (client) => {
 }
 ```
 
-Do your content migrations in `up` (add documets, patch fields, etc). If possible, do the inverse in `down` (delete documents, re-patch fields, etc) so your migration can be rolled back.
+Do your content migrations in `up` (add documents, patch fields, etc). If possible, do the inverse in `down` (delete documents, re-patch fields, etc) so your migration can be rolled back.
 
 ### Run pending migrations
 ```
