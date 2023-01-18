@@ -27,7 +27,7 @@ export const down = async (client) => {
 }
 ```
 
-Do your content migrations in `up` (add documents, patch fields, etc). If possible, do the inverse in `down` (delete documents, re-patch fields, etc) so your migration can be rolled back.
+Do your content migrations in `up` (add documents, patch fields, etc). If possible, do the inverse in `down` (delete documents, re-patch fields, etc) so your migration can be rolled back. Obviously, if you delete a field in the up migration it will be hard to re-instate it in the down migration unless you backup the value somewhere. You could save the revision ID and get the previous values that way, or any other way of preserving information. Note that you'll want to do this either in the dataset itself, or somewhere else non-local, as these migrations should ideally be runnable from anywhere.
 
 ### Run pending migrations
 ```
